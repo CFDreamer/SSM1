@@ -20,6 +20,12 @@
     <mvc:annotation-driven />
     
     <mvc:default-servlet-handler />
+    <mvc:interceptors>
+      <mvc:interceptor>
+        <mvc:mapping path="/student/*"/>
+        <bean class="com.interceptor.StudentInterceptor"></bean>
+      </mvc:interceptor>
+    </mvc:interceptors>
 
  <!-- 视图解析器 -->
     <bean
